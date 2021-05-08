@@ -1,0 +1,79 @@
+#####
+# Configuration file for the Constrained Device App (CDA)
+#
+# This provides a section-based configuration format for use by
+# ConfigUtil with keys defined in ConfigConst.
+#
+# IMPORTANT: Edit this file to meet your local system requirements.
+#
+
+#
+# MQTT client configuration information
+#
+[Mqtt.GatewayService]
+credFile       = ./cred/PiotMqttLocalCred.props
+certFile       = ./cert/PiotMqttLocalCertFile.pem
+host           = localhost
+port           = 1883
+securePort     = 8883
+defaultQoS     = 0
+keepAlive      = 60
+enableAuth     = False
+enableCrypt    = False
+
+#
+# CoAP client configuration information
+#
+[Coap.GatewayService]
+credFile       = ./cred/PiotCoapCred.props
+certFile       = ./cert/PiotCoapLocalCertFile.pem
+host           = localhost
+port           = 5683
+securePort     = 5684
+enableAuth     = False
+enableCrypt    = False
+
+#
+# CDA specific configuration information
+#
+[ConstrainedDevice]
+deviceLocationID = constraineddevice001
+enableEmulator   = False
+enableSenseHAT   = False
+enableMqttClient = True
+enableCoapServer = False
+enableCoapClient = False
+enableSystemPerformance = True
+enableSensing    = False
+enableLogging    = True
+pollCycleSecs    = 5
+testGdaDataPath  = /tmp/gda-data
+testCdaDataPath  = /tmp/cda-data
+testEmptyApp     = False
+
+# configurable limits for sensor simulation
+humiditySimFloor   =   35.0
+humiditySimCeiling =   45.0
+pressureSimFloor   =  990.0
+pressureSimCeiling = 1010.0
+tempSimFloor       =   15.0
+tempSimCeiling     =   25.0
+
+# configurable limits for actuator triggers
+handleTempChangeOnDevice = True
+triggerHvacTempFloor     = 18.0
+triggerHvacTempCeiling   = 20.0
+
+# camera settings
+streamHostAddr      = 127.0.0.1
+streamHostLabel     = localhost
+streamPort          = 8554
+streamProtocol      = rtsp
+streamPath          = stream
+streamEncoding      = MJPG
+streamFrameWidth    = 1440
+streamFrameHeight   = 1080
+streamFps           =   30
+imageFileExt        = .png
+videoFileExt        = .avi
+minMotionPixelsDiff = 10000

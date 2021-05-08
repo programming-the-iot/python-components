@@ -1,0 +1,35 @@
+#
+# MQTT client configuration information
+#
+[Mqtt.GatewayService]
+credFile       = ./cred/PiotMqttCred.props
+host           = localhost
+port           = 1883
+securePort     = 1884
+defaultQoS     = 0
+keepAlive      = 30
+enableCrypt    = False
+
+#
+# CoAP client configuration information
+#
+[Coap.GatewayService]
+credFile       = ./cred/PiotCoapCred.props
+host           = localhost
+port           = 5683
+securePort     = 5684
+enableCrypt    = False
+
+#
+# CDA specific configuration information
+#
+[ConstrainedDevice]
+enableEmulator  = False
+enableSenseHAT  = False
+enableLogging   = True
+pollCycleSecs   = 60
+testGdaDataPath = /tmp/gda-data
+testCdaDataPath = /tmp/cda-data
+credFile        = DummyCredFile.props
+humiditySimFloor   = 35
+humiditySimCeiling = 45

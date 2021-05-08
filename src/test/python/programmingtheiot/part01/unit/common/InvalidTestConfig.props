@@ -1,0 +1,25 @@
+# A bunch of meaningless words...
+
+=
+noValueKey
+noCategoryKey  = Some Value
+
+= Some Other Value
+
+[Cloud.GatewayService]
+apiKey         = Not Set = Another Value
+userNameToken  = Not Set
+authToken      = Not Set
+protocol       = ssl
+host           = localhost
+port           = 8883
+useWebAccess   = True
+certFile       = foobar.pem
+configPath     = config
+
+[GatewayDevice]
+enableEmulator = True
+pollCycleSecs  = 60
+nominalTemp    = 20
+
+[{ value: key }]

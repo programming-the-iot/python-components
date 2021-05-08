@@ -1,0 +1,6 @@
+# Imports for CV-specific functionality
+imutils
+opencv-python
+opencv-python-headless
+opencv-contrib-python
+rtsp

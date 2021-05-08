@@ -1,0 +1,16 @@
+# Imports for Chapter 02 and later
+apscheduler
+psutil
+
+# Imports for Chapter 03 and later
+numpy
+matplotlib
+sense-emu
+pisense
+
+# Imports for Chapters 06 and later
+paho-mqtt
+
+# Imports for Chapters 09 and later
+CoAPthon3
+aiocoap
