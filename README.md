@@ -62,7 +62,7 @@ Core exercises:
 - [pisense](https://pisense.readthedocs.io/en/release-0.2/#)
   - Reference: D. Jones. Pisense. (2016 – 2018) [Online]. Available: https://pisense.readthedocs.io/en/release-0.2/.
 - [paho-mqtt](https://www.eclipse.org/paho/)
-  - Reference: R. Light. paho-mqtt. (2020) [Online]. Available: https://pypi.org/project/paho-mqtt/.
+  - Reference: Eclipse Foundation, Inc. Eclipse Paho™ MQTT Python Client. (2020) [Online]. Available: https://github.com/eclipse/paho.mqtt.python.
 - [CoAPthon](https://github.com/Tanganelli/CoAPthon3)
   - Reference: G.Tanganelli, C. Vallati, E.Mingozzi, "CoAPthon: Easy Development of CoAP-based IoT Applications with Python", IEEE World Forum on Internet of Things (WF-IoT 2015)
 
