@@ -81,10 +81,13 @@ Additional exercises:
 
 NOTE: This list will be updated as others are incorporated.
 
-# DISCLAIMER
+# FAQ
+For typical questions (and answers) to the contents of this code base, please see the [FAQ](https://github.com/programming-the-iot/python-components/blob/default/FAQ.md)
+
+# IMPORTANT NOTES
 This code base is under active development.
 
-If  any  code  samples  or  other  technology  this  work  contains  or  describes  is  subject  to  open  source licenses  or  the  intellectual  property  rights  of  others,  it  is  your  responsibility  to  ensure  that  your  use thereof complies with such licenses and/or rights.
+If any code samples or other technology this work contains, describes, and / or is subject to open source licenses or the intellectual property rights of others, it is your responsibility to ensure that your use thereof complies with such licenses and/or rights.
 
 # LICENSE
 Please see [LICENSE](https://github.com/programming-the-iot/python-components/blob/default/LICENSE) if you plan to use this code.
