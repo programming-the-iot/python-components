@@ -50,7 +50,7 @@ class LedDisplayEmulatorTaskTest(unittest.TestCase):
 		pass
 
 	def testUpdateEmulator(self):
-		ad = ActuatorData(actuatorType = ConfigConst.LED_DISPLAY_ACTUATOR_TYPE)
+		ad = ActuatorData(typeID = ConfigConst.LED_DISPLAY_ACTUATOR_TYPE)
 		ad.setCommand(ConfigConst.COMMAND_ON)
 		ad.setStateData(self.HELLO_WORLD_A)
 		
