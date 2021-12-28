@@ -38,7 +38,7 @@ class DataUtilTest(unittest.TestCase):
 		self.sdName = "FooBar SensorData"
 		self.spdName = "FooBar SystemPerformanceData"
 		
-		self.sampleSpdJson = "{\"name\": \"" + self.spdName + "\", \"timeStamp\":\"2019-01-16T21:32:34.123123\",\"cpuUtil\":0.0,\"diskUtil\":0.0,\"memUtil\":0.0}"
+		self.sampleSpdJson = "{\"name\": \"" + self.spdName + "\", \"timeStamp\":\"2019-01-16T21:32:34.123123\",\"cpuUtil\":0.0,\"memUtil\":0.0}"
 		self.sampleAdJson = "{\"name\": \"" + self.adName + "\", \"timeStamp\": \"2019-01-20T15:38:35.123123\", \"hasError\": false, \"command\": 0, \"statusCode\": 0, \"stateData\": null, \"curValue\": 0.0}"
 		self.sampleSdJson = "{\"name\": \"" + self.sdName + "\", \"timeStamp\":\"2019-01-16T21:32:34.123123\",\"curValue\":0.0}"
 		
