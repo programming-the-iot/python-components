@@ -75,16 +75,16 @@ Core exercises:
 
 Additional exercises:
 
-- [imutils](https://github.com/jrosebr1/imutils)
+- [imutils](https://pypi.org/project/imutils/)
   - Reference: A. Rosebrock. imutils. (2020) [Online]. Available: https://pypi.org/project/imutils/.
-- [opencv-python](https://github.com/skvark/opencv-python)
+- [opencv-python](https://pypi.org/project/opencv-python/)
   - Reference: O. Heinisuo. opencv-python. (2020) [Online]. Available: https://pypi.org/project/opencv-python/.
 - [opencv-python-headless](https://pypi.org/project/opencv-python-headless/)
-  - Reference: See opencv-python
+  - Reference: O. Heinisuo. opencv-python. (2020) [Online]. Available: https://pypi.org/project/opencv-python-headless/.
 - [opencv-contrib-python](https://pypi.org/project/opencv-contrib-python/)
-  - Reference: See opencv-python
-- [rtsp](https://github.com/statueofmike/rtsp)
-  - Reference: M. Stewart. rtsp. (2020) [Online]. https://pypi.org/project/rtsp/.
+  - Reference: O. Heinisuo. opencv-python. (2020) [Online]. Available: https://pypi.org/project/opencv-contrib-python/.
+- [rtsp](https://pypi.org/project/rtsp/)
+  - Reference: M. Stewart. rtsp. (2020) [Online]. Available: https://pypi.org/project/rtsp/.
 
 NOTE: This list will be updated as others are incorporated.
 
