@@ -46,7 +46,7 @@ NOTE: The directory structure and all files are subject to change based on feedb
 PR's are disabled while the codebase is being developed.
 
 ## Updates
-Much of this repository, and in particular unit and integration tests, will continue to evolve, so please check back regularly for potential updates.
+Much of this repository, and in particular unit and integration tests, will continue to evolve, so please check back regularly for potential updates. Please note that API changes can - and likely will - occur at any time.
 
 # REFERENCES
 This repository has external dependencies on other open source projects. I'm grateful to the open source community and authors / maintainers of the following libraries:
