@@ -46,7 +46,7 @@ NOTE: The directory structure and all files are subject to change based on feedb
 PR's are disabled while the codebase is being developed.
 
 ## Updates
-Much of this repository, and in particular unit and integration tests, will continue to evolve, so please check back regularly for potential updates.
+Much of this repository, and in particular unit and integration tests, will continue to evolve, so please check back regularly for potential updates. Please note that API changes can - and likely will - occur at any time.
 
 # REFERENCES
 This repository has external dependencies on other open source projects. I'm grateful to the open source community and authors / maintainers of the following libraries:
@@ -75,16 +75,16 @@ Core exercises:
 
 Additional exercises:
 
-- [imutils](https://github.com/jrosebr1/imutils)
+- [imutils](https://pypi.org/project/imutils/)
   - Reference: A. Rosebrock. imutils. (2020) [Online]. Available: https://pypi.org/project/imutils/.
-- [opencv-python](https://github.com/skvark/opencv-python)
+- [opencv-python](https://pypi.org/project/opencv-python/)
   - Reference: O. Heinisuo. opencv-python. (2020) [Online]. Available: https://pypi.org/project/opencv-python/.
 - [opencv-python-headless](https://pypi.org/project/opencv-python-headless/)
-  - Reference: See opencv-python
+  - Reference: O. Heinisuo. opencv-python. (2020) [Online]. Available: https://pypi.org/project/opencv-python-headless/.
 - [opencv-contrib-python](https://pypi.org/project/opencv-contrib-python/)
-  - Reference: See opencv-python
-- [rtsp](https://github.com/statueofmike/rtsp)
-  - Reference: M. Stewart. rtsp. (2020) [Online]. https://pypi.org/project/rtsp/.
+  - Reference: O. Heinisuo. opencv-python. (2020) [Online]. Available: https://pypi.org/project/opencv-contrib-python/.
+- [rtsp](https://pypi.org/project/rtsp/)
+  - Reference: M. Stewart. rtsp. (2020) [Online]. Available: https://pypi.org/project/rtsp/.
 
 NOTE: This list will be updated as others are incorporated.
 
