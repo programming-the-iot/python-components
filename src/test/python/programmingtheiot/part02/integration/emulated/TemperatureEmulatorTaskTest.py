@@ -38,7 +38,7 @@ class TemperatureEmulatorTaskTest(unittest.TestCase):
 	@classmethod
 	def setUpClass(self):
 		logging.basicConfig(format = '%(asctime)s:%(module)s:%(levelname)s:%(message)s', level = logging.DEBUG)
-		logging.info("Testing TemperatureEmulatorTaskTest class [using SenseHAT emulator]...")
+		logging.info("Testing TemperatureSensorEmulatorTask class [using SenseHAT emulator]...")
 		self.tEmuTask = TemperatureSensorEmulatorTask()
 		
 	def setUp(self):
