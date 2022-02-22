@@ -49,8 +49,8 @@ class DeviceDataManagerWithCommsTest(unittest.TestCase):
 		pass
 
 	#@unittest.skip("Ignore for now.")
-	def testStartAndStopManagerWithMqttAndCoap(self):
-		ddMgr = DeviceDataManager(enableMqtt = False, enableCoap = False)
+	def testActuatorDataCallback(self):
+		ddMgr = DeviceDataManager()
 		
 		actuatorData = ActuatorData(typeID = ConfigConst.HVAC_ACTUATOR_TYPE)
 		actuatorData.setCommand(ConfigConst.COMMAND_ON)
