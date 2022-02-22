@@ -43,7 +43,7 @@ class ActuatorEmulatorManagerTest(unittest.TestCase):
 		logging.info("Testing ActuatorAdapterManager class [using SenseHAT emulator]...")
 		
 		self.defaultMsgListener = DefaultDataMessageListener()
-		self.actuatorAdapterMgr = ActuatorAdapterManager(useEmulator = True)
+		self.actuatorAdapterMgr = ActuatorAdapterManager()
 		self.actuatorAdapterMgr.setDataMessageListener(self.defaultMsgListener)
 		
 	def setUp(self):
