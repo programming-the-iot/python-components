@@ -39,7 +39,7 @@ class SensorEmulatorManagerTest(unittest.TestCase):
 		logging.info("Testing SensorAdapterManager class [using SenseHAT emulator]...")
 		
 		self.defaultMsgListener = DefaultDataMessageListener()
-		self.sensorAdapterMgr = SensorAdapterManager(useEmulator = True)
+		self.sensorAdapterMgr = SensorAdapterManager()
 		self.sensorAdapterMgr.setDataMessageListener(self.defaultMsgListener)
 		
 	def setUp(self):
