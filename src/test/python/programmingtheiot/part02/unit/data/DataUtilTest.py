@@ -38,12 +38,6 @@ class DataUtilTest(unittest.TestCase):
 		self.sdName = "FooBar SensorData"
 		self.spdName = "FooBar SystemPerformanceData"
 		
-		self.sampleSpdJson = "{\"name\": \"" + self.spdName + "\", \"timeStamp\":\"2019-01-16T21:32:34.123123\",\"cpuUtil\":0.0,\"memUtil\":0.0}"
-		self.sampleAdJson = "{\"name\": \"" + self.adName + "\", \"timeStamp\": \"2019-01-20T15:38:35.123123\", \"hasError\": false, \"command\": 0, \"statusCode\": 0, \"stateData\": null, \"curValue\": 0.0}"
-		self.sampleSdJson = "{\"name\": \"" + self.sdName + "\", \"timeStamp\":\"2019-01-16T21:32:34.123123\",\"curValue\":0.0}"
-		
-		self.sampleAd2Json = "{\"command\":1,\"value\":12.5,\"isResponse\":false,\"stateData\":\"\",\"name\":\"DataUtilTestName\",\"timeStamp\":\"2021-01-03T02:21:25.163507800Z\",\"statusCode\":1,\"typeID\":0,\"locationID\":\"gatewaydevice001\",\"latitude\":0.0,\"longitude\":0.0,\"elevation\":0.0}"
-		
 	def setUp(self):
 		logging.info("================================================")
 		logging.info("DataUtil test execution...")
@@ -59,14 +53,17 @@ class DataUtilTest(unittest.TestCase):
 		logging.info("\n\n----- [ActuatorData Conversions from JSON] -----")
 		
 		self.assertIsNone(self.dataUtil.jsonToActuatorData(None))
-		
 		self.assertIsNone(self.dataUtil.jsonToActuatorData(""))
 		
-		adObj1    = self.dataUtil.jsonToActuatorData(self.sampleAdJson)
+		ad     = ActuatorData()
+		ad.setName(self.adName)
+		adJson = self.dataUtil.actuatorDataToJson(ad)
+		
+		adObj1    = self.dataUtil.jsonToActuatorData(adJson)
 		adObj1Str = self.dataUtil.actuatorDataToJson(adObj1)
 		adObj2    = self.dataUtil.jsonToActuatorData(adObj1Str)
 
-		logging.info("Sample JSON: " + str(self.sampleAdJson))
+		logging.info("Sample JSON: " + str(adJson))
 		logging.info("JSON to ActuatorData: " + str(adObj1))
 		logging.info("ActuatorData back to JSON: " + str(adObj1Str))
 		
@@ -100,11 +97,18 @@ class DataUtilTest(unittest.TestCase):
 	def testSensorDataConversionsFromJson(self):
 		logging.info("\n\n----- [SensorData Conversions from JSON] -----")
 		
-		sdObj1    = self.dataUtil.jsonToSensorData(self.sampleSdJson)
+		self.assertIsNone(self.dataUtil.jsonToSensorData(None))
+		self.assertIsNone(self.dataUtil.jsonToSensorData(""))
+		
+		sd     = SensorData()
+		sd.setName(self.sdName)
+		sdJson = self.dataUtil.sensorDataToJson(sd)
+		
+		sdObj1    = self.dataUtil.jsonToSensorData(sdJson)
 		sdObj1Str = self.dataUtil.sensorDataToJson(sdObj1)
 		sdObj2    = self.dataUtil.jsonToSensorData(sdObj1Str)
 		
-		logging.info("Sample JSON: " + str(self.sampleSdJson))
+		logging.info("Sample JSON: " + str(sdJson))
 		logging.info("JSON to SensorData: " + str(sdObj1))
 		logging.info("SensorData back to JSON: " + str(sdObj1Str))
 		
@@ -138,11 +142,18 @@ class DataUtilTest(unittest.TestCase):
 	def testSystemPerformanceConversionsFromJson(self):
 		logging.info("\n\n----- [SystemPerformanceData Conversions from JSON] -----")
 		
-		spdObj1    = self.dataUtil.jsonToSystemPerformanceData(self.sampleSpdJson)
+		self.assertIsNone(self.dataUtil.jsonToSystemPerformanceData(None))
+		self.assertIsNone(self.dataUtil.jsonToSystemPerformanceData(""))
+		
+		spd     = SystemPerformanceData()
+		spd.setName(self.spdName)
+		spdJson = self.dataUtil.systemPerformanceDataToJson(spd)
+		
+		spdObj1    = self.dataUtil.jsonToSystemPerformanceData(spdJson)
 		spdObj1Str = self.dataUtil.systemPerformanceDataToJson(spdObj1)
 		spdObj2    = self.dataUtil.jsonToSystemPerformanceData(spdObj1Str)
 		
-		logging.info("Sample JSON: " + str(self.sampleSpdJson))
+		logging.info("Sample JSON: " + str(spdJson))
 		logging.info("JSON to SystemPerformanceData: " + str(spdObj1))
 		logging.info("SystemPerformanceData back to JSON: " + str(spdObj1Str))
 		
