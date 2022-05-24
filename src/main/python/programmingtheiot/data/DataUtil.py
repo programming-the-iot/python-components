@@ -22,22 +22,22 @@ class DataUtil():
 	def __init__(self, encodeToUtf8 = False):
 		pass
 	
-	def actuatorDataToJson(self, actuatorData):
+	def actuatorDataToJson(self, data: ActuatorData = None):
 		pass
 	
-	def sensorDataToJson(self, sensorData):
+	def sensorDataToJson(self, data: SensorData = None):
 		pass
 
-	def systemPerformanceDataToJson(self, sysPerfData):
+	def systemPerformanceDataToJson(self, data: SystemPerformanceData = None):
 		pass
 	
-	def jsonToActuatorData(self, jsonData):
+	def jsonToActuatorData(self, jsonData: str = None):
 		pass
 	
-	def jsonToSensorData(self, jsonData):
+	def jsonToSensorData(self, jsonData: str = None):
 		pass
 	
-	def jsonToSystemPerformanceData(self, jsonData):
+	def jsonToSystemPerformanceData(self, jsonData: str = None):
 		pass
 	
 class JsonDataEncoder(JSONEncoder):

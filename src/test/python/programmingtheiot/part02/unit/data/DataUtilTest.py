@@ -55,26 +55,6 @@ class DataUtilTest(unittest.TestCase):
 		pass
 	
 	#@unittest.skip("Ignore for now.")
-	def testActuatorDataConversionsFromJsonUsingDecimal(self):
-		logging.info("\n\n----- [ActuatorData Conversions from JSON] -----")
-		
-		adData = ActuatorData()
-		adData.setCommand(1)
-		adData.setStateData("This is a test.")
-		
-		jsonData1 = self.dataUtil.actuatorDataToJson(adData, True)
-		
-		logging.info("\n\nActuatorData to JSON:\n\n" + str(jsonData1))
-		
-		adData2   = self.dataUtil.jsonToActuatorData(jsonData1)
-
-		logging.info("\n\nJSON to ActuatorData:\n\n" + str(adData2))
-		
-		jsonData2 = self.dataUtil.actuatorDataToJson(adData2, True)
-		
-		logging.info("\n\nActuatorData back to JSON:\n\n" + str(jsonData2))
-		
-	#@unittest.skip("Ignore for now.")
 	def testActuatorDataConversionsFromJson(self):
 		logging.info("\n\n----- [ActuatorData Conversions from JSON] -----")
 		
@@ -83,7 +63,7 @@ class DataUtilTest(unittest.TestCase):
 		self.assertIsNone(self.dataUtil.jsonToActuatorData(""))
 		
 		adObj1    = self.dataUtil.jsonToActuatorData(self.sampleAdJson)
-		adObj1Str = self.dataUtil.actuatorDataToJson(adObj1, False)
+		adObj1Str = self.dataUtil.actuatorDataToJson(adObj1)
 		adObj2    = self.dataUtil.jsonToActuatorData(adObj1Str)
 
 		logging.info("Sample JSON: " + str(self.sampleAdJson))

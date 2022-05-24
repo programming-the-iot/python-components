@@ -12,12 +12,15 @@ import unittest
 
 from time import sleep
 
+import programmingtheiot.common.ConfigConst as ConfigConst
+
 from programmingtheiot.cda.app.DeviceDataManager import DeviceDataManager
 from programmingtheiot.cda.connection.MqttClientConnector import MqttClientConnector
 
 from programmingtheiot.common.ResourceNameEnum import ResourceNameEnum
 from programmingtheiot.data.DataUtil import DataUtil
 from programmingtheiot.data.ActuatorData import ActuatorData
+from programmingtheiot.data.SensorData import SensorData
 
 class DeviceDataManagerWithCommsTest(unittest.TestCase):
 	"""
@@ -53,7 +56,7 @@ class DeviceDataManagerWithCommsTest(unittest.TestCase):
 	def tearDown(self):
 		pass
 
-	@unittest.skip("Ignore for now.")
+	#@unittest.skip("Ignore for now.")
 	def testStartAndStopManagerWithMqtt(self):
 		"""
 		NOTE: Be sure to enable CoAP by setting the following flag to True
@@ -69,11 +72,18 @@ class DeviceDataManagerWithCommsTest(unittest.TestCase):
 		mqttClient.connectClient()
 		
 		ad = ActuatorData()
-		ad.setCommand(1)
-		
+		ad.setCommand(ConfigConst.COMMAND_ON)
+		ad.setValue(15.4)
+		ad.setAsResponse()
 		adJson = DataUtil().actuatorDataToJson(ad)
 		
-		mqttClient.publishMessage(ResourceNameEnum.CDA_ACTUATOR_CMD_RESOURCE, msg = adJson, qos = 1)
+		mqttClient.publishMessage(ResourceNameEnum.CDA_ACTUATOR_RESPONSE_RESOURCE, msg = adJson, qos = 1)
+		
+		sd = SensorData()
+		sd.setValue(133.5)
+		sdJson = DataUtil().sensorDataToJson(sd)
+		
+		mqttClient.publishMessage(ResourceNameEnum.CDA_SENSOR_MSG_RESOURCE, msg = sdJson, qos = 1)
 		
 		sleep(10)
 		

@@ -64,7 +64,86 @@ class HvacActuatorSimTaskTest(unittest.TestCase):
 		self.assertIsNotNone(adr)
 		self.assertEquals(adr.getCommand(), ConfigConst.COMMAND_OFF)
 		logging.info("ActuatorData: " + str(adr))
-			
+		
+	@unittest.skip("Ignore for now.")
+	def testUpdateActuatorRepeatCommands(self):
+		ad = ActuatorData(typeID = ConfigConst.HVAC_ACTUATOR_TYPE)
+		
+		# new command ON with new value - should succeed
+		ad.setCommand(ConfigConst.COMMAND_ON)
+		ad.setValue(self.DEFAULT_VAL_A)
+		
+		adr = self.hSimTask.updateActuator(ad)
+		
+		self.assertIsNotNone(adr)
+		self.assertEquals(adr.getValue(), self.DEFAULT_VAL_A)
+		logging.info("ActuatorData: " + str(adr))
+		
+		# same command ON with same value - should fail
+		ad.setCommand(ConfigConst.COMMAND_ON)
+		ad.setValue(self.DEFAULT_VAL_A)
+		
+		adr = self.hSimTask.updateActuator(ad)
+		
+		self.assertIsNone(adr)
+		logging.info("ActuatorData: " + str(adr))
+		
+		# new command OFF with same value - should succeed
+		ad.setCommand(ConfigConst.COMMAND_OFF)
+		ad.setValue(self.DEFAULT_VAL_A)
+		
+		adr = self.hSimTask.updateActuator(ad)
+		
+		self.assertIsNotNone(adr)
+		self.assertEquals(adr.getValue(), self.DEFAULT_VAL_A)
+		logging.info("ActuatorData: " + str(adr))
+		
+		# same command OFF with different value - should succeed
+		ad.setCommand(ConfigConst.COMMAND_OFF)
+		ad.setValue(self.DEFAULT_VAL_B)
+		
+		adr = self.hSimTask.updateActuator(ad)
+		
+		self.assertIsNotNone(adr)
+		logging.info("ActuatorData: " + str(adr))
+		
+		# new command ON with same value - should succeed
+		ad.setCommand(ConfigConst.COMMAND_ON)
+		ad.setValue(self.DEFAULT_VAL_B)
+		
+		adr = self.hSimTask.updateActuator(ad)
+		
+		self.assertIsNotNone(adr)
+		logging.info("ActuatorData: " + str(adr))
+		
+		# same command ON with new value - should succeed
+		ad.setCommand(ConfigConst.COMMAND_ON)
+		ad.setValue(self.DEFAULT_VAL_A)
+		
+		adr = self.hSimTask.updateActuator(ad)
+		
+		self.assertIsNotNone(adr)
+		logging.info("ActuatorData: " + str(adr))
+		
+		# new command OFF with same value - should succeed
+		ad.setCommand(ConfigConst.COMMAND_OFF)
+		ad.setValue(self.DEFAULT_VAL_A)
+		
+		adr = self.hSimTask.updateActuator(ad)
+		
+		self.assertIsNotNone(adr)
+		self.assertEquals(adr.getValue(), self.DEFAULT_VAL_A)
+		logging.info("ActuatorData: " + str(adr))
+		
+		# same command OFF with same value - should fail
+		ad.setCommand(ConfigConst.COMMAND_OFF)
+		ad.setValue(self.DEFAULT_VAL_A)
+		
+		adr = self.hSimTask.updateActuator(ad)
+		
+		self.assertIsNone(adr)
+		logging.info("ActuatorData: " + str(adr))
+		
 if __name__ == "__main__":
 	unittest.main()
 	

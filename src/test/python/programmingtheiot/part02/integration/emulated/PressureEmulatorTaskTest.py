@@ -38,7 +38,7 @@ class PressureEmulatorTaskTest(unittest.TestCase):
 	@classmethod
 	def setUpClass(self):
 		logging.basicConfig(format = '%(asctime)s:%(module)s:%(levelname)s:%(message)s', level = logging.DEBUG)
-		logging.info("Testing PressureSensorEmulatorTask class [using SenseHAT emulator]...")
+		logging.info("Testing PressureEmulatorTaskTest class [using SenseHAT emulator]...")
 		self.pEmuTask = PressureSensorEmulatorTask()
 		
 	def setUp(self):

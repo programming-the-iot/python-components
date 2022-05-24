@@ -17,7 +17,7 @@ import programmingtheiot.common.ConfigConst as ConfigConst
 from programmingtheiot.cda.app.DeviceDataManager import DeviceDataManager
 from programmingtheiot.data.ActuatorData import ActuatorData
 
-class DeviceDataManagerWithCommsTest(unittest.TestCase):
+class DeviceDataManagerIntegrationTest(unittest.TestCase):
 	"""
 	This test case class contains very basic integration tests for
 	DeviceDataManager. It should not be considered complete,
@@ -48,18 +48,14 @@ class DeviceDataManagerWithCommsTest(unittest.TestCase):
 	def tearDown(self):
 		pass
 
-	#@unittest.skip("Ignore for now.")
-	def testActuatorDataCallback(self):
+	@unittest.skip("Ignore for now.")
+	def testDeviceDataMgrTimedIntegration(self):
 		ddMgr = DeviceDataManager()
+		ddMgr.startManager()
 		
-		actuatorData = ActuatorData(typeID = ConfigConst.HVAC_ACTUATOR_TYPE)
-		actuatorData.setCommand(ConfigConst.COMMAND_ON)
-		actuatorData.setStateData("This is a test.")
-		actuatorData.setValue(52)
+		sleep(60)
 		
-		ddMgr.handleActuatorCommandMessage(actuatorData)
-		
-		sleep(10)
+		ddMgr.stopManager()
 		
 if __name__ == "__main__":
 	unittest.main()

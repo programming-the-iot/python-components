@@ -41,7 +41,7 @@ class MqttClientConnectorTest(unittest.TestCase):
 	def tearDown(self):
 		pass
 
-	#@unittest.skip("Ignore for now.")
+	@unittest.skip("Ignore for now.")
 	def testConnectAndDisconnect(self):
 		startTime = time.time_ns()
 		
@@ -53,15 +53,15 @@ class MqttClientConnectorTest(unittest.TestCase):
 		
 		logging.info("Connect and Disconnect: " + str(elapsedMillis) + " ms")
 		
-	#@unittest.skip("Ignore for now.")
+	@unittest.skip("Ignore for now.")
 	def testPublishQoS0(self):
 		self._execTestPublish(self.MAX_TEST_RUNS, 0)
 
-	#@unittest.skip("Ignore for now.")
+	@unittest.skip("Ignore for now.")
 	def testPublishQoS1(self):
 		self._execTestPublish(self.MAX_TEST_RUNS, 1)
 
-	#@unittest.skip("Ignore for now.")
+	@unittest.skip("Ignore for now.")
 	def testPublishQoS2(self):
 		self._execTestPublish(self.MAX_TEST_RUNS, 2)
 

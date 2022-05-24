@@ -20,7 +20,7 @@ class BaseActuatorSimTask():
 	
 	"""
 
-	def __init__(self, name = ConfigConst.NOT_SET, typeID: int = ConfigConst.DEFAULT_ACTUATOR_TYPE, simpleName: str = "Actuator"):
+	def __init__(self, name: str = ConfigConst.NOT_SET, typeID: int = ConfigConst.DEFAULT_ACTUATOR_TYPE, simpleName: str = "Actuator"):
 		pass
 		
 	def getLatestActuatorResponse(self) -> ActuatorData:

@@ -25,6 +25,7 @@ class SystemPerformanceDataTest(unittest.TestCase):
 	
 	DEFAULT_NAME = "SystemPerformanceDataFooBar"
 	DEFAULT_CPU_UTIL_DATA  = 10.0
+	DEFAULT_DISK_UTIL_DATA = 10.0
 	DEFAULT_MEM_UTIL_DATA  = 10.0
 	
 	@classmethod

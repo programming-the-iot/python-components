@@ -12,6 +12,8 @@ import unittest
 
 from time import sleep
 
+import programmingtheiot.common.ConfigConst as ConfigConst
+
 from programmingtheiot.cda.app.DeviceDataManager import DeviceDataManager
 from programmingtheiot.cda.connection.MqttClientConnector import MqttClientConnector
 
@@ -19,7 +21,7 @@ from programmingtheiot.common.ResourceNameEnum import ResourceNameEnum
 from programmingtheiot.data.DataUtil import DataUtil
 from programmingtheiot.data.ActuatorData import ActuatorData
 
-class DeviceDataManagerWithCommsTest(unittest.TestCase):
+class DeviceDataManagerWithMqttClientOnlyTest(unittest.TestCase):
 	"""
 	This test case class contains very basic integration tests for
 	DeviceDataManager. It should not be considered complete,
