@@ -26,6 +26,8 @@ This repository is comprised of the following top level paths:
 - [src](https://github.com/programming-the-iot/python-components/tree/default/src): Contains the following source trees:
   - [src/main/python](https://github.com/programming-the-iot/python-components/tree/default/src/main/python): The main source tree for python-components. Keep in mind that most of these classes are shell representations ONLY and must be implemented as part of the exercises referenced above.
   - [src/test/python](https://github.com/programming-the-iot/python-components/tree/default/src/test/python): The test source tree for python-components. These are designed to perform very basic unit and integration testing of the implementation of the exercises referenced above. This tree is sectioned by part - part01, part02, and part03 - which correspond to the structure of Programming the Internet of Things.
+- [simTestData](https://github.com/programming-the-iot/python-components/tree/default/simTestData): Contains sample simulated test data.
+  - This simulated test data was generated as part of my own solution to Lab Module 5 as part of the exercises referenced above. Keep in mind that these data are from my own solution, which will likely be different from your own.
 
 Here are some other files at the top level that are important to review:
 - [basic_imports.txt](https://github.com/programming-the-iot/python-components/blob/default/basic_imports.txt): The core library dependencies - use pip to install.
