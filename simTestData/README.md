@@ -13,7 +13,7 @@ PR's are disabled while the codebase is being developed.
 Much of this repository, and in particular unit and integration tests, will continue to evolve, so please check back regularly for potential updates. Please note that API changes can - and likely will - occur at any time.
 
 # REFERENCES
-The raw data backing the generated JSON, along with the associated generated image graphs, were generated as part of my own solution set, and depend upon various open source projects. I'm grateful to the open source community and authors / maintainers of the following libraries:
+The raw data backing the generated JSON, along with the associated image graphs, were generated as part of my own solution set, and depend upon various open source projects. I'm grateful to the open source community and authors / maintainers of the following libraries:
 
 - [matplotlib](https://matplotlib.org/)
   - Reference: [J. D. Hunter, "Matplotlib: A 2D Graphics Environment", Computing in Science & Engineering, vol. 9, no. 3, pp. 90-95, 2007.](https://ieeexplore.ieee.org/document/4160265)
