@@ -32,4 +32,4 @@ This code base is under active development.
 If any code samples or other technology this work contains, describes, and / or is subject to open source licenses or the intellectual property rights of others, it is your responsibility to ensure that your use thereof complies with such licenses and/or rights.
 
 # LICENSE
-Please see [LICENSE](https://github.com/programming-the-iot/python-components/blob/default/LICENSE) if you plan to use this code.
+Please see [LICENSE](https://github.com/programming-the-iot/python-components/blob/default/LICENSE) if you plan to use this code and sample data.
