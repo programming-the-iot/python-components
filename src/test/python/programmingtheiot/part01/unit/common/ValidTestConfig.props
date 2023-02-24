@@ -30,6 +30,6 @@ enableLogging   = True
 pollCycleSecs   = 60
 testGdaDataPath = /tmp/gda-data
 testCdaDataPath = /tmp/cda-data
-credFile        = DummyCredFile.props
+credFile        = /Users/shaun.husain/Development/iot/programmingtheiot/python-components/src/test/python/programmingtheiot/part01/unit/common/DummyCredFile.props
 humiditySimFloor   = 35
 humiditySimCeiling = 45

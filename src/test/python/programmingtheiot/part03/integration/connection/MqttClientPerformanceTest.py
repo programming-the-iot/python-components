@@ -6,7 +6,6 @@
 # 
 # Copyright (c) 2020 by Andrew D. King
 # 
-
 import logging
 import unittest
 

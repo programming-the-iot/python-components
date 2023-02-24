@@ -22,5 +22,5 @@ class SystemMemUtilTask(BaseSystemUtilTask):
 		pass
 	
 	def getTelemetryValue(self) -> float:
-		pass
+		return psutil.virtual_memory().percent
 		
