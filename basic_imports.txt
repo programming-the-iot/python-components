@@ -8,9 +8,9 @@ matplotlib
 sense-emu
 pisense
 
-# Imports for Chapters 06 and later
+# Imports for Chapter 06 and later
 paho-mqtt
 
-# Imports for Chapters 09 and later
+# Imports for Chapter 09 and later
 CoAPthon3
 aiocoap
