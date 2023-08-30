@@ -53,7 +53,7 @@ Much of this repository, and in particular unit and integration tests, will cont
 # REFERENCES
 This repository has external dependencies on other open source projects. I'm grateful to the open source community and authors / maintainers of the following libraries:
 
-Core exercises:
+Lab Module Library References (not all are required for each lab module):
 
 - [aiocoap](http://github.com/chrysn/aiocoap/)
   - Reference: Amsüss, Christian and Wasilak, Maciej. aiocoap: Python CoAP Library. Energy Harvesting Solutions, 2013–. http://github.com/chrysn/aiocoap/.
@@ -75,7 +75,7 @@ Core exercises:
 - [CoAPthon](https://github.com/Tanganelli/CoAPthon3)
   - Reference: G.Tanganelli, C. Vallati, E.Mingozzi, "CoAPthon: Easy Development of CoAP-based IoT Applications with Python", IEEE World Forum on Internet of Things (WF-IoT 2015)
 
-Additional exercises:
+Additional Library References (for in-class Computer Vision examples):
 
 - [imutils](https://pypi.org/project/imutils/)
   - Reference: A. Rosebrock. imutils. (2020) [Online]. Available: https://pypi.org/project/imutils/.
@@ -100,3 +100,5 @@ If any code samples or other technology this work contains, describes, and / or 
 
 # LICENSE
 Please see [LICENSE](https://github.com/programming-the-iot/python-components/blob/default/LICENSE) if you plan to use this code.
+
+Please refer to the referenced libraries for their respective licenses.
