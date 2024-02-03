@@ -41,17 +41,17 @@ class BaseIotDataTest(unittest.TestCase):
 	def testDefaultValues(self):
 		td = TestIotData()
 		
-		self.assertEquals(td.getName(), ConfigConst.NOT_SET)
-		self.assertEquals(td.getTypeID(), ConfigConst.DEFAULT_TYPE_ID)
-		self.assertEquals(td.getLocationID(), "constraineddevice001") # from PiotConfig.props
-		self.assertEquals(td.getStatusCode(), ConfigConst.DEFAULT_STATUS)
+		self.assertEqual(td.getName(), ConfigConst.NOT_SET)
+		self.assertEqual(td.getTypeID(), ConfigConst.DEFAULT_TYPE_ID)
+		self.assertEqual(td.getLocationID(), "constraineddevice001") # from PiotConfig.props
+		self.assertEqual(td.getStatusCode(), ConfigConst.DEFAULT_STATUS)
 
 	def testParameterUpdates(self):
 		td = self._createTestIotData()
 		
-		self.assertEquals(td.getName(), self.DEFAULT_NAME)
-		self.assertEquals(td.getLocationID(), self.DEFAULT_LOCATION_ID)
-		self.assertEquals(td.getStatusCode(), self.DEFAULT_STATUS_CODE)
+		self.assertEqual(td.getName(), self.DEFAULT_NAME)
+		self.assertEqual(td.getLocationID(), self.DEFAULT_LOCATION_ID)
+		self.assertEqual(td.getStatusCode(), self.DEFAULT_STATUS_CODE)
 		
 		td.setStatusCode(-1)
 		
@@ -61,15 +61,15 @@ class BaseIotDataTest(unittest.TestCase):
 		td = TestIotData()
 		td2 = self._createTestIotData()
 		
-		self.assertEquals(td.getName(), ConfigConst.NOT_SET)
-		self.assertEquals(td.getLocationID(), "constraineddevice001") # from PiotConfig.props
-		self.assertEquals(td.getStatusCode(), ConfigConst.DEFAULT_STATUS)
+		self.assertEqual(td.getName(), ConfigConst.NOT_SET)
+		self.assertEqual(td.getLocationID(), "constraineddevice001") # from PiotConfig.props
+		self.assertEqual(td.getStatusCode(), ConfigConst.DEFAULT_STATUS)
 		
 		td.updateData(td2)
 		
-		self.assertEquals(td.getName(), self.DEFAULT_NAME)
-		self.assertEquals(td.getLocationID(), self.DEFAULT_LOCATION_ID)
-		self.assertEquals(td.getStatusCode(), self.DEFAULT_STATUS_CODE)
+		self.assertEqual(td.getName(), self.DEFAULT_NAME)
+		self.assertEqual(td.getLocationID(), self.DEFAULT_LOCATION_ID)
+		self.assertEqual(td.getStatusCode(), self.DEFAULT_STATUS_CODE)
 		
 	def _createTestIotData(self):
 		td = TestIotData()

@@ -43,16 +43,16 @@ class SensorDataTest(unittest.TestCase):
 	def testDefaultValues(self):
 		sd = SensorData()
 		
-		self.assertEquals(sd.getName(), ConfigConst.NOT_SET)
-		self.assertEquals(sd.getValue(), ConfigConst.DEFAULT_VAL)
+		self.assertEqual(sd.getName(), ConfigConst.NOT_SET)
+		self.assertEqual(sd.getValue(), ConfigConst.DEFAULT_VAL)
 		
 		logging.info("Sensor data as string: " + str(sd))
 
 	def testParameterUpdates(self):
 		sd = self._createTestSensorData()
 		
-		self.assertEquals(sd.getName(), self.DEFAULT_NAME)
-		self.assertEquals(sd.getValue(), self.MIN_VALUE)
+		self.assertEqual(sd.getName(), self.DEFAULT_NAME)
+		self.assertEqual(sd.getValue(), self.MIN_VALUE)
 
 	def testFullUpdate(self):
 		sd = SensorData()
@@ -60,8 +60,8 @@ class SensorDataTest(unittest.TestCase):
 		
 		sd.updateData(sd2)
 		
-		self.assertEquals(sd.getName(), self.DEFAULT_NAME)
-		self.assertEquals(sd.getValue(), self.MIN_VALUE)
+		self.assertEqual(sd.getName(), self.DEFAULT_NAME)
+		self.assertEqual(sd.getValue(), self.MIN_VALUE)
 	
 	def _createTestSensorData(self):
 		sd = SensorData()

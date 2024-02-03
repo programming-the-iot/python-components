@@ -42,37 +42,37 @@ class SystemPerformanceDataTest(unittest.TestCase):
 	def testDefaultValues(self):
 		spd = SystemPerformanceData()
 		
-		self.assertEquals(spd.getName(), ConfigConst.SYSTEM_PERF_NAME)
-		self.assertEquals(spd.getStatusCode(), ConfigConst.DEFAULT_STATUS)
+		self.assertEqual(spd.getName(), ConfigConst.SYSTEM_PERF_NAME)
+		self.assertEqual(spd.getStatusCode(), ConfigConst.DEFAULT_STATUS)
 		
-		self.assertEquals(spd.getCpuUtilization(), ConfigConst.DEFAULT_VAL)
-		self.assertEquals(spd.getMemoryUtilization(), ConfigConst.DEFAULT_VAL)
+		self.assertEqual(spd.getCpuUtilization(), ConfigConst.DEFAULT_VAL)
+		self.assertEqual(spd.getMemoryUtilization(), ConfigConst.DEFAULT_VAL)
 		
 		logging.info("System perf data as string: " + str(spd))
 
 	def testParameterUpdates(self):
 		spd = self._createTestSystemPerformanceData()
 		
-		self.assertEquals(spd.getName(), self.DEFAULT_NAME)
+		self.assertEqual(spd.getName(), self.DEFAULT_NAME)
 		
-		self.assertEquals(spd.getCpuUtilization(), self.DEFAULT_CPU_UTIL_DATA)
-		self.assertEquals(spd.getMemoryUtilization(), self.DEFAULT_MEM_UTIL_DATA)
+		self.assertEqual(spd.getCpuUtilization(), self.DEFAULT_CPU_UTIL_DATA)
+		self.assertEqual(spd.getMemoryUtilization(), self.DEFAULT_MEM_UTIL_DATA)
 
 	def testFullUpdate(self):
 		spd = SystemPerformanceData()
 		spd2 = self._createTestSystemPerformanceData()
 		
-		self.assertEquals(spd.getName(), ConfigConst.SYSTEM_PERF_NAME)
+		self.assertEqual(spd.getName(), ConfigConst.SYSTEM_PERF_NAME)
 		
-		self.assertEquals(spd.getCpuUtilization(), ConfigConst.DEFAULT_VAL)
-		self.assertEquals(spd.getMemoryUtilization(), ConfigConst.DEFAULT_VAL)
+		self.assertEqual(spd.getCpuUtilization(), ConfigConst.DEFAULT_VAL)
+		self.assertEqual(spd.getMemoryUtilization(), ConfigConst.DEFAULT_VAL)
 		
 		spd.updateData(spd2)
 		
-		self.assertEquals(spd.getName(), self.DEFAULT_NAME)
+		self.assertEqual(spd.getName(), self.DEFAULT_NAME)
 		
-		self.assertEquals(spd.getCpuUtilization(), self.DEFAULT_CPU_UTIL_DATA)
-		self.assertEquals(spd.getMemoryUtilization(), self.DEFAULT_MEM_UTIL_DATA)
+		self.assertEqual(spd.getCpuUtilization(), self.DEFAULT_CPU_UTIL_DATA)
+		self.assertEqual(spd.getMemoryUtilization(), self.DEFAULT_MEM_UTIL_DATA)
 	
 	def _createTestSystemPerformanceData(self):
 		spd = SystemPerformanceData()

@@ -46,7 +46,7 @@ class HumidifierActuatorSimTaskTest(unittest.TestCase):
 		adr = self.hSimTask.updateActuator(ad)
 		
 		self.assertIsNotNone(adr)
-		self.assertEquals(adr.getValue(), self.DEFAULT_VAL_A)
+		self.assertEqual(adr.getValue(), self.DEFAULT_VAL_A)
 		logging.info("ActuatorData: " + str(adr))
 		
 		ad.setValue(self.DEFAULT_VAL_B)
@@ -54,7 +54,7 @@ class HumidifierActuatorSimTaskTest(unittest.TestCase):
 		adr = self.hSimTask.updateActuator(ad)
 		
 		self.assertIsNotNone(adr)
-		self.assertEquals(adr.getValue(), self.DEFAULT_VAL_B)
+		self.assertEqual(adr.getValue(), self.DEFAULT_VAL_B)
 		logging.info("ActuatorData: " + str(adr))
 		
 		ad.setCommand(ConfigConst.COMMAND_OFF)
@@ -62,7 +62,7 @@ class HumidifierActuatorSimTaskTest(unittest.TestCase):
 		adr = self.hSimTask.updateActuator(ad)
 		
 		self.assertIsNotNone(adr)
-		self.assertEquals(adr.getCommand(), ConfigConst.COMMAND_OFF)
+		self.assertEqual(adr.getCommand(), ConfigConst.COMMAND_OFF)
 		logging.info("ActuatorData: " + str(adr))
 		
 	@unittest.skip("Ignore for now.")
@@ -76,7 +76,7 @@ class HumidifierActuatorSimTaskTest(unittest.TestCase):
 		adr = self.hSimTask.updateActuator(ad)
 		
 		self.assertIsNotNone(adr)
-		self.assertEquals(adr.getValue(), self.DEFAULT_VAL_A)
+		self.assertEqual(adr.getValue(), self.DEFAULT_VAL_A)
 		logging.info("ActuatorData: " + str(adr))
 		
 		# same command ON with same value - should fail
@@ -95,7 +95,7 @@ class HumidifierActuatorSimTaskTest(unittest.TestCase):
 		adr = self.hSimTask.updateActuator(ad)
 		
 		self.assertIsNotNone(adr)
-		self.assertEquals(adr.getValue(), self.DEFAULT_VAL_A)
+		self.assertEqual(adr.getValue(), self.DEFAULT_VAL_A)
 		logging.info("ActuatorData: " + str(adr))
 		
 		# same command OFF with different value - should succeed
@@ -132,7 +132,7 @@ class HumidifierActuatorSimTaskTest(unittest.TestCase):
 		adr = self.hSimTask.updateActuator(ad)
 		
 		self.assertIsNotNone(adr)
-		self.assertEquals(adr.getValue(), self.DEFAULT_VAL_A)
+		self.assertEqual(adr.getValue(), self.DEFAULT_VAL_A)
 		logging.info("ActuatorData: " + str(adr))
 		
 		# same command OFF with same value - should fail
