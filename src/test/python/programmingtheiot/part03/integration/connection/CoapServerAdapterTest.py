@@ -198,7 +198,7 @@ class CoapServerAdapterTest(unittest.TestCase):
 		sysPerfData.setName("SystemPerfMsg")
 		sysPerfData.setCpuUtilization(sysPerfVal)
 		sysPerfData.setDiskUtilization(sysPerfVal)
-		sysPerfData.setMemoryUtilization(sysPerfData)
+		sysPerfData.setMemoryUtilization(sysPerfVal)
 		
 		# Uncomment the next SLOC to trigger data message listener callback for perf data
 		#self.dataMsgListener.handleSystemPerformanceMessage(sysPerfData)
