@@ -75,6 +75,9 @@ class ConfigUtilTest(unittest.TestCase):
 	
 	def testIsConfigDataLoaded(self):
 		self.assertTrue(self.configUtil.isConfigDataLoaded())
+		#test to break it for fun
+		#self.assertTrue(False)
+		
 	
 if __name__ == "__main__":
 	unittest.main()
