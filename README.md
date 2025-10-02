@@ -6,7 +6,7 @@ This is the original repository for Python exercises for Programming the IoT. Th
 
 - NEW CDA REPOSITORY: https://github.com/programming-the-iot/cda-python-components
 
-Please use the NEW REPOSITORY shown in the above link!
+Please use the NEW CDA REPOSITORY shown in the above link!
 
 ## About This Repository
 
